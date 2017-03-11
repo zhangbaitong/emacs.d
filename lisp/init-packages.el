@@ -32,9 +32,26 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;;加载饥饿删除功能
-(require 'hungry-delete)
+
 (global-hungry-delete-mode t)
+;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(smartparens-global-mode t)
+
+;;配置Counsel
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+
+
+;;配置js环境
+;;;js文件识别模式
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       auto-mode-alist))
+
+;;加载monokai主题
+(load-theme 'monokai t)
 
 ;保留最近打开的文件列表
 (require 'recentf)
