@@ -14,6 +14,7 @@
 				nodejs-repl
 				exec-path-from-shell
 				popwin
+				reveal-in-osx-finder
 				) "Default Packages")
 (setq package-selected-packages zhangbaitong/packages)
 ;;;;更新packages列表
@@ -31,12 +32,10 @@
 ;;配置命令行程序可见
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
-
 (global-hungry-delete-mode t)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
-
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 ;;配置Counsel
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)

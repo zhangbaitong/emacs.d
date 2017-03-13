@@ -14,5 +14,12 @@
 (global-set-key (kbd "<f2>") 'open-init-file)
 ;;最近打开的文件
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
+;;缩进格式化
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+;;补充company-mode的补全
+(global-set-key (kbd "s-/") 'hippie-expand)
+;;dired回车在当前缓冲区打开
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 (provide 'init-keybindings)
