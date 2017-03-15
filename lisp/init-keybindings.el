@@ -21,5 +21,6 @@
 ;;dired回车在当前缓冲区打开
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (provide 'init-keybindings)

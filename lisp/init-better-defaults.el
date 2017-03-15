@@ -17,6 +17,13 @@
 (setq recentf-max-menu-items 25)
 ;;开启elisp-mode的括号匹配
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+;;开启匹配括号高亮
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "高亮闭包括号"
+(cond ((looking-at-p "\\s(") (funcall fn))
+      (t (save-excursion
+	   (ignore-errors (backward-up-list))
+	   (funcall fn)))))
 ;;开启删除选中模式
 (delete-selection-mode 1)
 ;;配置company提示延迟和开始提示前缀字符长度
@@ -60,6 +67,32 @@
 (require 'dired-x)
 ;;双窗口对拷
 (setq dired-dwim-target t)
+;;处理web页面的换行符号
+(defun hidden-dos-eol()
+  "不显示^M符号，方式混合unix和dos的换行符号"
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+(defun remove-dos-eol()
+  "删除^M"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+;;dwim : do what i mean
+(defun occur-dwin()
+  "使用鼠标当前所在内容作为occur搜索字符"
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'sympol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "M-s o") 'occur-dwin)
 
+;;(set-language-environment "UTF-8")
 
 (provide 'init-better-defaults)
