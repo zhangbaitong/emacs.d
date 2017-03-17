@@ -1,4 +1,14 @@
 
+
+;;删除整行
+(setq-default kill-whole-line t)
+;;语法高亮
+(global-font-lock-mode t)
+;;开启括号匹配高亮
+(show-paren-mode t)
+
+
+
 ;;禁用提示声音
 (setq ring-bell-function 'ignore)
 ;;禁止备份文件和自动保存
@@ -94,5 +104,20 @@
 (global-set-key (kbd "M-s o") 'occur-dwin)
 
 ;;(set-language-environment "UTF-8")
+
+;; 鼠标滚轮，把默认滚动改为3行
+;;(defun up-slightly () (interactive) (scroll-up 1))
+;;(defun down-slightly () (interactive) (scroll-down 1))
+;;(global-set-key [mouse-4] 'down-slightly)
+;;;(global-set-key [mouse-5] 'up-slightly)
+
+
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+;;(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+;;(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+;;(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+
 
 (provide 'init-better-defaults)

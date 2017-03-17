@@ -21,6 +21,9 @@
 				iedit
 				org-pomodoro
 				which-key
+				php-mode
+				ac-php
+				flymake-php
 				) "Default Packages")
 (setq package-selected-packages zhangbaitong/packages)
 ;;;;更新packages列表
@@ -51,6 +54,7 @@
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode)
+	 ("\\.phtml" . web-mode)
        ("\\.html\\'" . web-mode)) 
        auto-mode-alist))
 

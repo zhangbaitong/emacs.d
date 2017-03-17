@@ -23,4 +23,12 @@
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;;自定义按键
+;;;;查找键定义: c-h k cmd
+;;;;定义常规按键
+
+;;;;定义插件按键
+;;;;;;定义switch-window
+(global-set-key (kbd "M-p") 'switch-window)
+
 (provide 'init-keybindings)

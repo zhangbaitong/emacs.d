@@ -1,4 +1,4 @@
-;; init-ui.el
+;; 优化UI细节
 
 ;;关闭顶部菜单
 (tool-bar-mode -1)
