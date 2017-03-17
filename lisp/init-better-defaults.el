@@ -7,8 +7,6 @@
 ;;开启括号匹配高亮
 (show-paren-mode t)
 
-
-
 ;;禁用提示声音
 (setq ring-bell-function 'ignore)
 ;;禁止备份文件和自动保存

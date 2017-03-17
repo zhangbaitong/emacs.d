@@ -1,4 +1,16 @@
-;; 
+;;自定义按键
+;;;;查找键定义: c-h k cmd
+;;第一版按键定义
+;;(global-set-key (kbd "M-o") 'ido-find-file)
+;;(global-set-key (kbd "M-s") 'save-buffer)
+;;(global-set-key (kbd "M-q") 'quit-window)
+;;(global-set-key (kbd "M-l") 'ido-switch-buffer)
+;;;;;;定义smex
+;;(global-set-key (kbd "M-x") 'smex)
+;;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+ ;;(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;;第二版按键定义
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -22,10 +34,6 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 (global-set-key (kbd "C-c a") 'org-agenda)
-
-;;自定义按键
-;;;;查找键定义: c-h k cmd
-;;;;定义常规按键
 
 ;;;;定义插件按键
 ;;;;;;定义switch-window

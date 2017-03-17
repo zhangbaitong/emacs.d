@@ -107,6 +107,10 @@
 (require 'org-pomodoro)
 
 
+;;(ido-mode t)
+;;smex
+;;(require 'smex)
+;;(smex-initialize)
 
 (provide 'init-packages)
 
