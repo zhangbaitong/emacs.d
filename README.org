@@ -1,0 +1,19 @@
+* 配置介绍
+** 版本 
+   - Emacs25.1
+** 功能
+   - 安装包管理
+     - 定义依赖，自动更新
+   - 模块化代码
+     - packages,ui,better-default,org,php,keybindings,custom
+   - 插件功能
+     - 自动补全，PHP支持，HTML和js支持，org-mode，按键提示等
+** 使用
+#+BEGIN_SRC
+$ mv ~/.emacs.d ~/.emacs.d.bak
+$ git clone https://github.com/zhangbaitong/emacs.d.git ~/.emacs.d
+#+END_SRC
+
+
+
+   
