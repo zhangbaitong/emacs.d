@@ -1,0 +1,30 @@
+* practice-emacs
+
+** 1day
+  - [percol](https://github.com/mooz/percol)
+  - [clojure-csv](https://github.com/clojure/data.csv)
+  - [emacs-cider](https://github.com/clojure-emacs/cider)
+  - [purcell-emacs-comfig](https://github.com/purcell/emacs.d)
+  - [clojure-emacs](http://clojure-doc.org/articles/tutorials/emacs.html)
+
+** 2day
+  - [magit](http://magit.vc/)
+  - [magit-source](https://github.com/magit/magit)
+  - [dired](http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html)
+  - [dired-info](http://lifegoo.pluskid.org/wiki/EmacsAsFileManger.html)
+  - [dired-plus](http://lifegoo.pluskid.org/wiki/EnhanceDired.html)
+
+** 3day
+  - [NERDTree](http://www.emacswiki.org/emacs/NeoTree_%E4%B8%AD%E6%96%87wiki)
+  - [ido](http://www.emacswiki.org/emacs/InteractivelyDoThings)
+  - [emacs-guide-in-one-year](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org)
+  
+** 4day
+  - [reader-doc](http://clojure.org/reader)
+  - [reader-code](https://github.com/clojure/tools.reader)
+  - [eastwood](https://github.com/jonase/eastwood)
+  - [toolbox](http://www.clojure-toolbox.com/)
+  - [nippy](https://github.com/ptaoussanis/nippy)
+  - [print-dup](https://clojuredocs.org/clojure.core/print-dup)
+  - [print-dup2](http://conj.io/store/v1/org.clojure/clojure/1.7.0/clj/clojure.core/*print-dup*/)
+  - [edn](https://github.com/edn-format/edn)

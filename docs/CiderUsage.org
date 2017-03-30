@@ -1,0 +1,37 @@
+# CiderUsage
+
+- start REPL
+M-x cider-jack-in
+- compile
+C-c C-k
+- save
+C-x C-s
+- switch buffer
+C-x b ENTER
+- run test
+C-c ,
+split window
+C-x 2
+change ns
+C-c M-n
+switch window
+C-x o
+at end of s-exp then send fun to repl
+C-x C-e
+clear repl
+C-c M-o
+cmd history
+M-p
+M-n
+doc
+(doc println)
+when at the fun name see doc
+C-c C-d d
+jump to source code
+M-.
+return
+M-,
+with single file can list all and jump
+M-x imenu
+quit
+M-x cider-quit

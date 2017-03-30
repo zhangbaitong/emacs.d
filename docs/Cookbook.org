@@ -1,0 +1,162 @@
+* Cookbook
+ - Author  : zhangbaitong@github
+ - Data    : 2017-03-11
+ - Version : Emacs25.1
+
+** 基础知识
+   - http://www.emacswiki.org/emacs?interface=zh-cn
+   - http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html
+
+** 安装
+   - app
+    https://emacsformacosx.com/
+   - brew
+#+BEGIN_SRC 
+brew install emacs
+/usr/local/Cellar/emacs/25.1
+brew services start emacs
+#+END_SRC
+
+** 按键定义
+M(eta, option), s(uper, command key), S(hift), C(trl)
+c-h(prefix key)
+c-g(cancel key)
+c-c(ustomer, 用户自定义)
+c-x(tend,扩展)
+m-x(leader key,命令起始键)
+重复命令(翻页8次)
+c-u 8 c-v
+q(uit, quit welcome page)
+
+** 帮助命令 c-h ?
+   | c-h t(utorial) | c-h k(ey) | c-h v(ariable) | c-h f(unction) | c-h m(ode, 查看当前所有模式) |
+   eg. 快速查找c-p命令绑定函数 : c-h c c-p
+
+** 光标移动
+   - c-p/n/b/f(方向)
+   - c-a/e(行首尾)
+   - c-l(光标位置）
+
+** elisp
+   | 注释        | ;;          |
+   | eval        | c-x c-e     |
+   | eval-all    | eval-buffer |
+   | src comment | <s-tab      |
+   | 编辑代码块  | c-'         |
+   | info        | m-x info    |
+
+#+BEGIN_SRC emacs-lisp
+  (setq make-backup-files nil)
+#+END_SRC
+
+** 更新packages
+   - m-x package-list-packages
+   - update > U
+   - m-x package-autoremove
+   - customize-group
+** js2-mode
+   - nodejs-reple-send-buffer
+** org-mode
+   - TODO
+    c-c c-t
+   - fix** seq
+    m-return
+   - gtd
+    c-c c-s start time
+    c-c c-d deadline
+    c-c a
+    c-c c-e export
+
+** 文件编辑
+  | 打开文件(新建)             | c-x c-f                                                   |
+  | 右删除                     | c-d                                                       |
+  | 删除光标到末尾整行并复制   | c-k                                                       |
+  | 删除单词                   | m-d                                                       |
+  | 删除行                     | m-k                                                       |
+  | 撤销undo(redo是undo的undo) | c-/ , c- - ,c-x u                                         |
+  | 粘贴                       | c-y                                                       |
+  | 搜索向后                   | C-s                                                       |
+  | 搜索向前                   | C-r                                                       |
+  | 替换                       | query-replace (y继续n跳过!全部q退出),query-replace-regexp |
+  | 关闭buffer                 | C-x k,M-x kill-some-buffers                               |
+  | 区域选择和复制             | c-space开始，移动鼠标结束，c-x c-x确认                    |
+  | c-h段落选择，c-x c-c全选   | c-w剪切，m-w复制，c-y黏贴，m-y循环黏贴                    |
+  | 保存文件                   | c-x c-s                                                   |
+  | 保存全部文件               | c-x s                                                     |
+  | 退出                       | c-x c-c                                                   |
+
+** 光标移动
+  | 翻页     | c-v,m-v |
+  | 首末位置 | m-<,m-> |
+
+** 窗口操作
+  | 水平分   | c-x 2 |
+  | 垂直分   | c-x 3 |
+  | 切换     | c-x o |
+  | 关闭当前 | c-x 0 |
+  | 关闭其它 | c-x 1 |
+
+** shell
+  - M-x shell
+
+** 文件管理-dired
+  - M-x dired
+  - C-x d
+  - C-x C-f dirname
+  - 操作
+  | 进入       | enter |
+  | 新窗口打开 | o     |
+  | 返回上层   | q     |
+  | 预览       | v     |
+  | 退出预览   | q     |
+  - 删除文件
+  | 先标记     | d |
+  | 取消标记   | u |
+  | 再执行     | x |
+  | 直接删除   | D |
+  | 复制       | C |
+  | 改名和移动 | R |
+  | 复制文件名 | w |
+  | 改变排序   | s |
+  | 刷新       | g |
+  | 比较       | = |
+
+** 发送mail
+  - C-x m
+  - C-x C-s
+  - C-c C-c
+
+** 插件库
+  - https://melpa.org/
+#+BEGIN_SRC 
+git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+#+END_SRC
+
+** PHP环境
+
+switch-window
+https://github.com/dimitri/switch-window
+auto-complete(ac-php-remake-tags-all)
+https://github.com/auto-complete/auto-complete
+php-mode
+https://github.com/ejmr/php-mode
+web-mode
+https://github.com/fxbois/web-mode
+ac-php
+https://github.com/xcwen/ac-php
+smex
+https://github.com/nonsequitur/smex
+ace-jump-mode
+https://github.com/winterTTr/ace-jump-mode
+find-file-in-project
+https://github.com/technomancy/find-file-in-project
+color-theme-sanityinc-tomorrow
+https://github.com/purcell/color-theme-sanityinc-tomorrow
+flymake-php
+https://github.com/purcell/flymake-php
+highlight-parentheses
+https://github.com/tsdh/highlight-parentheses.el
+
+## 其他库
+ecb
+https://github.com/ecb-home/ecb

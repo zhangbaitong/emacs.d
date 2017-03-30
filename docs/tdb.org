@@ -1,0 +1,67 @@
+#TDB
+
+##start
+
+Emacs
+
+C-x C-f core.clj
+
+C-x 2
+
+C-x 3
+
+C-x o
+
+M-x cider-jack-in
+
+## run app
+
+C-c M-n
+
+## run special function
+
+C-x C-e
+
+## run test
+
+C-c ,
+
+## complie
+
+C-c C-k
+
+## cdoe link
+
+M-.
+
+M-,
+
+M-x imenu
+
+## clear repl
+
+C-c M-o
+
+## repl history
+
+M-n
+
+M-p
+
+## exit message
+
+q
+
+## exit repl
+
+M-x cider-quit
+
+## modify code check delay
+
+init-flycheck.el:flycheck-idle-change-delay 8.0
+
+## edn
+
+extensible data notation
+
+

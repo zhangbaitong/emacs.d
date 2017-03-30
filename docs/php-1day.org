@@ -1,0 +1,29 @@
+* php-1day
+
+** install emacs on mac
+#+BEGIN_SRC 
+brew install emacs
+brew install emacs --with-cocoa
+ln -s /usr/local/Cellar/emacs/25.1/Emacs.app /Applications/
+brew linkapps emacs
+brew cask install emacs
+brew services start emacs
+#+END_SRC
+
+https://github.com/cask/cask
+
+** package manager
+
+mkdir ~/.emacs.d/site-lisp
+vi ~/.emacs
+‘’‘
+let ((default-directory "~/.emacs.d/site-lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+‘’‘
+
+- color-theme
+
+vi ~/.emacs
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-robin-hood)
